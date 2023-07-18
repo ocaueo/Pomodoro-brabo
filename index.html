@@ -1,36 +1,47 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Aula 2</title>
-    <link rel="stylesheet" href="estilo.css">
-</head>
+    <link rel="stylesheet" href="estilo.css" />
+  </head>
+  <body>
+    <section id="pomodoro">
+      <h2>pomodoro</h2>
+      <ul>
+        <li class="active">pomodoro</li>
+        <li>short break</li>
+        <li>long break</li>
+      </ul>
+      <div class="relogio">
+        <canvas id="segundos"></canvas>
+        <h1 id="hora">00:00 <span id="state">start</span></h1>
+      </div>
+      <box-icon id="settings" type="solid" name="cog"></box-icon>
+    </section>
 
-<section id="pomodoro">
+    <div class="configuracoes">
+      <h3>Configurações <box-icon id="fecharSettings" name="x"></box-icon></h3>
+      <h6>Tempo (minutos)</h6>
 
-<h2>pomodoro</h2>
-<ul> 
-    <li class="active">
-        pomodoro
-    </li>
-    <li>
-        short break
-    </li>
-    <li>
-        long break
-    </li>
-</ul>
-<div class="relogio">
-    <canvas id="segundos"></canvas>
-    <h1 id="hora">00:00 <span id="state">start</span></h1>
+      <div class="tempos">
+        <div class="tempo">
+          <span>pomodoroTime</span>
+          <input type="number" min="1" max="60" name="pomodoroTime" />
+        </div>
+        <div class="tempo">
+          <span>short break</span>
+          <input id="shortTime" min="1" max="10" name="shortTime" />
+        </div>
+        <div class="tempo">
+          <span>long time</span>
+          <input id="longTime" min="1" max="20" name="longTime" />
+        </div>
+      </div>
+    </div>
 
-</div>
-</section>
-
-<body>
-    
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
